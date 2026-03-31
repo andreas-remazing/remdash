@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remdash Typography Tokens</title>
+
+  <!-- Source Sans Pro + Source Code Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Source Sans Pro"', 'sans-serif'],
+            mono: ['"Source Code Pro"', 'monospace'],
+          },
+          fontSize: {
+            '2xs': ['10px', { lineHeight: '16px' }],
+            'xs':  ['12px', { lineHeight: '20px' }],
+            'sm':  ['14px', { lineHeight: '22px' }],
+            'md':  ['16px', { lineHeight: '24px' }],
+            'base':  ['16px', { lineHeight: '24px' }],
+            'lg':  ['18px', { lineHeight: '24px' }],
+            'xl':  ['24px', { lineHeight: '32px' }],
+            '2xl': ['28px', { lineHeight: '36px' }],
+            '3xl': ['32px', { lineHeight: '40px' }],
+            '4xl': ['36px', { lineHeight: '48px' }],
+            '5xl': ['48px', { lineHeight: '60px' }],
+          },
+          fontWeight: {
+            extralight: '200',
+            light:      '300',
+            regular:    '400',
+            semibold:   '600',
+            bold:       '700',
+            black:      '900',
+          },
+          lineHeight: {
+            tight:   '1.15',
+            snug:    '1.30',
+            normal:  '1.50',
+            relaxed: '1.65',
+            loose:   '2.00',
+          },
+          colors: {
+            'white-ffffff': '#ffffff',
+            'grays-350': '#dfe3e9',
+            'grays-300': '#e2e7ee',
+            'grays-550': '#9db1bf',
+            'grays-950': '#102e3e',
+            'red-primary': '#fd5853',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Source Sans Pro', sans-serif; }
+    .tabular { font-variant-numeric: tabular-nums; }
+    .chip {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fd5853;
+      padding: 0;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .section-header {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: #9db1bf;
+      letter-spacing: 1.76px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body class="bg-white-ffffff font-sans text-md text-grays-950 antialiased">
+<div class="max-w-7xl mx-auto px-[60px] py-16">
+
+  <!-- PAGE HEADER -->
+  <div class="flex gap-6 items-start mb-[30px]">
+    <div class="w-[58px] h-[58px] flex-shrink-0">
+      <svg class="w-full h-full" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="58" height="58" rx="12" fill="#fd5853"/>
+        <text x="29" y="35" font-family="Source Sans Pro" font-size="28" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">R</text>
+      </svg>
+    </div>
+    <div class="flex-1">
+      <p class="section-header mb-2">Design System</p>
+      <h1 class="text-4xl font-bold leading-tight text-grays-950 mb-0">Remdash Typography Tokens</h1>
+    </div>
+  </div>
+
+  <!-- SECTION 01: Font Size Scale -->
+  <section class="mb-[60px]">
+    <div class="section-header border-b border-grays-300 pb-3 mb-0">
+      01 — Font Size Scale
+    </div>
+    <div class="border-t border-grays-300">
+      <!-- text-2xs / 10px / 16px -->
+      <div class="grid grid-cols-[220px_1fr_136px] gap-8 items-center py-4 border-b border-grays-300">
+        <span class="chip">text-2xs</span>
+        <span class="text-2xs text-grays-950">Dashboard overline · micro badge — 2XS</span>
+        <div class="text-xs text-grays-550 text-right whitespace-nowrap">
+          <div>10px</div>
+          <div>16px</div>
+        </div>
+      </div>
+      <!-- text-xs / 12px / 20px -->
+      <div class="grid grid-cols-[220px_1fr_136px] gap-8 items-center py-4 border-b border-grays-300">
+        <span class="chip">text-xs</span>
+        <span class="text-xs text-grays-950">Chart axis tick · table footer — XS</span>
+        <div class="text-xs text-grays-550 text-right whitespace-nowrap">
+          <div>12px</div>
+          <div>20px</div>
+        </div>
+      </div>
+      <!-- text-sm / 14px / 22px -->
+      <div class="grid grid-cols-[220px_1fr_136px] gap-8 items-center py-4 border-b border-grays-300">
+        <span class="chip">text-sm</span>
+        <span class="text-sm text-grays-950">Caption · helper text · tag labels — SM</span>
+        <div class="text-xs text-grays-550 text-right whitespace-nowrap">
+          <div>14px</div>
+          <div>22px</div>
+        </div>
+      </div>
+      <!-- text-md / 16px / 24px -->
+      <div class="grid grid-cols-[220px_1fr_136px] gap-8 items-center py-4 border-b border-grays-300">
+        <span class="chip">text-md</span>
+        <span class="text-md text-grays-950">Default body text · table cells · form inputs — MD</span>
+        <div class="text-xs text-grays-550 text-right whitespace-nowrap">
+          <div>16px</div>
+          <div>24px</div>
+        </div>
+      </div>
+      <!-- text-lg / 18px / 24px -->
+      <div class="grid grid-cols-[220px_1fr_136px] gap-8 items-center py-4 border-b border-grays-300">
+        <span class="chip">text-lg</span>
+        <span class="text-lg text-grays-950">Emphasized body · subheadings · nav items — LG</span>
+        <div class="text-xs text-grays-550 text-right whitespace-nowrap">
+          <div>18px</div>
+          <div>24px</div>
+        </div>
+      </div>
+      <!-- text-xl / 24px / 32px -->
+      <div class="grid grid-cols-[220px_1fr_136px] gap-8 items-center py-4 border-b border-grays-300">
+        <span class="chip">text-xl</span>
+        <span class="text-xl text-grays-950">Card titles · section leads · modal headings — XL</span>
+        <div class="text-xs text-grays-550 text-right whitespace-nowrap">
+          <div>24px</div>
+          <div>32px</div>
+        </div>
+      </div>
+      <!-- text-2xl / 28px / 36px -->
+      <div class="grid grid-cols-[220px_1fr_136px] gap-8 items-center py-4 border-b border-grays-300">
+        <span class="chip">text-2xl</span>
+        <span class="text-2xl text-grays-950">Widget headlines · sidebar titles — 2XL</span>
+        <div class="text-xs text-grays-550 text-right whitespace-nowrap">
+          <div>28px</div>
+          <div>36px</div>
+        </div>
+      </div>
+      <!-- text-3xl / 32px / 40px -->
+      <div class="grid grid-cols-[220px_1fr_136px] gap-8 items-center py-4 border-b border-grays-300">
+        <span class="chip">text-3xl</span>
+        <span class="text-3xl text-grays-950">Page titles · drawer headings — 3XL</span>
+        <div class="text-xs text-grays-550 text-right whitespace-nowrap">
+          <div>32px</div>
+          <div>40px</div>
+        </div>
+      </div>
+      <!-- text-4xl / 36px / 48px -->
+      <div class="grid grid-cols-[220px_1fr_136px] gap-8 items-center py-4 border-b border-grays-300">
+        <span class="chip">text-4xl</span>
+        <span class="text-4xl text-grays-950">Hero · KPI numbers — 4XL</span>
+        <div class="text-xs text-grays-550 text-right whitespace-nowrap">
+          <div>36px</div>
+          <div>48px</div>
+        </div>
+      </div>
+      <!-- text-5xl / 48px / 60px -->
+      <div class="grid grid-cols-[220px_1fr_136px] gap-8 items-center py-4">
+        <span class="chip">text-5xl</span>
+        <span class="text-5xl text-grays-950">Display — 5XL</span>
+        <div class="text-xs text-grays-550 text-right whitespace-nowrap">
+          <div>48px</div>
+          <div>60px</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02: Font Weight Scale -->
+  <section class="mb-[60px]">
+    <div class="section-header border-b border-grays-300 pb-3 mb-0">
+      02 — Font Weight Scale
+    </div>
+    <div class="border-t border-grays-300">
+      <div class="grid grid-cols-[220px_1fr_120px] gap-6 items-center py-4 border-b border-grays-300">
+        <span class="chip">font-extralight</span>
+        <span class="text-xl font-extralight text-grays-950">Extralight — Decorative large text only</span>
+        <span class="text-xs text-grays-550 text-right">200</span>
+      </div>
+      <div class="grid grid-cols-[220px_1fr_120px] gap-6 items-center py-4 border-b border-grays-300">
+        <span class="chip">font-light</span>
+        <span class="text-xl font-light text-grays-950">Light — Subtitles · supporting copy</span>
+        <span class="text-xs text-grays-550 text-right">300</span>
+      </div>
+      <div class="grid grid-cols-[220px_1fr_120px] gap-6 items-center py-4 border-b border-grays-300">
+        <span class="chip">font-regular</span>
+        <span class="text-xl font-regular text-grays-950">Regular — Default body · captions</span>
+        <span class="text-xs text-grays-550 text-right">400</span>
+      </div>
+      <div class="grid grid-cols-[220px_1fr_120px] gap-6 items-center py-4 border-b border-grays-300">
+        <span class="chip">font-semibold</span>
+        <span class="text-xl font-semibold text-grays-950">Semibold — Labels · headings · buttons</span>
+        <span class="text-xs text-grays-550 text-right">600</span>
+      </div>
+      <div class="grid grid-cols-[220px_1fr_120px] gap-6 items-center py-4 border-b border-grays-300">
+        <span class="chip">font-bold</span>
+        <span class="text-xl font-bold text-grays-950">Bold — Page titles · KPI numbers</span>
+        <span class="text-xs text-grays-550 text-right">700</span>
+      </div>
+      <div class="grid grid-cols-[220px_1fr_120px] gap-6 items-center py-4">
+        <span class="chip">font-black</span>
+        <span class="text-xl font-black text-grays-950">Black — Display · hero splash</span>
+        <span class="text-xs text-grays-550 text-right">900</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 03: Line Height -->
+  <section class="mb-[60px]">
+    <div class="section-header border-b border-grays-300 pb-3 mb-0">
+      03 — Line Height
+    </div>
+    <div class="border-t border-grays-300">
+      <div class="grid grid-cols-[220px_1fr_120px] gap-6 items-start py-5 border-b border-grays-300">
+        <span class="chip mt-1">leading-tight</span>
+        <div class="bg-gray-100 border-l-2 border-red-primary px-4 py-3 rounded-r">
+          <p class="text-md leading-tight text-grays-950 m-0">Headlines &amp; numeric displays benefit from tighter leading so stacked lines read as a single visual unit.</p>
+        </div>
+        <span class="text-xs text-grays-550 text-right mt-1">1.15</span>
+      </div>
+      <div class="grid grid-cols-[220px_1fr_120px] gap-6 items-start py-5 border-b border-grays-300">
+        <span class="chip mt-1">leading-snug</span>
+        <div class="bg-gray-100 border-l-2 border-red-primary px-4 py-3 rounded-r">
+          <p class="text-md leading-snug text-grays-950 m-0">Subheadings and card titles sit at a snug rhythm — compact yet breathing slightly more than display headings.</p>
+        </div>
+        <span class="text-xs text-grays-550 text-right mt-1">1.30</span>
+      </div>
+      <div class="grid grid-cols-[220px_1fr_120px] gap-6 items-start py-5 border-b border-grays-300">
+        <span class="chip mt-1">leading-normal</span>
+        <div class="bg-gray-100 border-l-2 border-red-primary px-4 py-3 rounded-r">
+          <p class="text-md leading-normal text-grays-950 m-0">Standard body text for UI. Most dashboard labels, table cells, and form inputs default here for comfortable reading.</p>
+        </div>
+        <span class="text-xs text-grays-550 text-right mt-1">1.50</span>
+      </div>
+      <div class="grid grid-cols-[220px_1fr_120px] gap-6 items-start py-5 border-b border-grays-300">
+        <span class="chip mt-1">leading-relaxed</span>
+        <div class="bg-gray-100 border-l-2 border-red-primary px-4 py-3 rounded-r">
+          <p class="text-md leading-relaxed text-grays-950 m-0">Long-form body copy and description panels use relaxed leading to improve readability across sentences.</p>
+        </div>
+        <span class="text-xs text-grays-550 text-right mt-1">1.65</span>
+      </div>
+      <div class="grid grid-cols-[220px_1fr_120px] gap-6 items-start py-5">
+        <span class="chip mt-1">leading-loose</span>
+        <div class="bg-gray-100 border-l-2 border-red-primary px-4 py-3 rounded-r">
+          <p class="text-md leading-loose text-grays-950 m-0">Lists and spaced layouts with generous breathing room between items.</p>
+        </div>
+        <span class="text-xs text-grays-550 text-right mt-1">2.00</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 04: Large Headlines -->
+  <section class="mb-[60px]">
+    <div class="section-header border-b border-grays-300 pb-3 mb-0">
+      04 — Large Headlines
+    </div>
+    <div class="border-t border-grays-300">
+      <div class="grid grid-cols-[220px_1fr_200px] gap-6 items-center py-4 border-b border-grays-300">
+        <span class="chip">display-lg</span>
+        <span class="text-4xl font-bold text-grays-950">Large Headlines</span>
+        <span class="text-xs text-grays-550 text-right">4XL · bold</span>
+      </div>
+      <div class="grid grid-cols-[220px_1fr_200px] gap-6 items-center py-4 border-b border-grays-300">
+        <span class="chip">card-title</span>
+        <span class="text-2xl font-semibold text-grays-950">Card / Section Title</span>
+        <span class="text-xs text-grays-550 text-right">2XL · semibold</span>
+      </div>
+      <div class="grid grid-cols-[220px_1fr_200px] gap-6 items-center py-4">
+        <span class="chip">page-title</span>
+        <span class="text-3xl font-bold text-grays-950">Page Heading</span>
+        <span class="text-xs text-grays-550 text-right">3XL · bold</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 05: Hero Display -->
+  <section class="mb-[60px]">
+    <div class="section-header border-b border-grays-300 pb-3 mb-0">
+      05 — Hero Display
+    </div>
+    <div class="border-t border-grays-300">
+      <div class="grid grid-cols-[220px_1fr_200px] gap-6 items-center py-6 border-b border-grays-300">
+        <span class="chip">kpi-number</span>
+        <span class="text-5xl font-bold text-grays-950 tabular">98,304</span>
+        <span class="text-xs text-grays-550 text-right">5XL · bold · tabular</span>
+      </div>
+      <div class="grid grid-cols-[220px_1fr_200px] gap-6 items-center py-6 border-b border-grays-300">
+        <span class="chip">kpi-label</span>
+        <span class="text-sm text-grays-550">Total Revenue</span>
+        <span class="text-xs text-grays-550 text-right">SM · secondary</span>
+      </div>
+      <div class="grid grid-cols-[220px_1fr_200px] gap-6 items-center py-6">
+        <span class="chip">hero-metric</span>
+        <span class="text-4xl font-bold text-red-primary tabular">3.7%</span>
+        <span class="text-xs text-grays-550 text-right">4XL · bold · accent</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Stats -->
+  <div class="flex justify-between gap-6 pt-8 border-t border-grays-300 text-center">
+    <div>
+      <span class="block text-sm font-semibold text-grays-950">15</span>
+      <span class="text-xs text-grays-550">Type Sizes</span>
+    </div>
+    <div>
+      <span class="block text-sm font-semibold text-grays-950">6</span>
+      <span class="text-xs text-grays-550">Font Weights</span>
+    </div>
+    <div>
+      <span class="block text-sm font-semibold text-grays-950">5</span>
+      <span class="text-xs text-grays-550">Line Heights</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
